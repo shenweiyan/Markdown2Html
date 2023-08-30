@@ -1,0 +1,39 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g yarn
+      - run: node --version
+      - run: npm --version 
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          yarn upgrade
+          yarn install
+          yarn run build
+
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: shenweiyan/Markdown2Html
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}     
+          publish_dir: ./build
+          publish_branch: gh-pages
+          force_orphan: true
+          full_commit_message: ${{ github.event.head_commit.message }}
+          cname: 'mh.weiyan.cc'
