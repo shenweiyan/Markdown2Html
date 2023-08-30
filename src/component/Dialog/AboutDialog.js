@@ -28,9 +28,9 @@ class AboutDialog extends Component {
         onOk={this.handleOk}
         onCancel={this.handleCancel}
         footer={[
-          <Button key="version" onClick={this.handleVersion}>
+          <!--Button key="version" onClick={this.handleVersion}>
             更新记录
-          </Button>,
+          </Button-->,
           <Button key="submit" type="primary" onClick={this.handleOk}>
             确认
           </Button>,
@@ -45,23 +45,22 @@ class AboutDialog extends Component {
             id="nice-about-dialog-star"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/TaleAi/markdown2html"
+            href="https://github.com/shenweiyan/Markdown2Html"
             style={style.noBorder}
           >
-            <img alt="" style={style.img} src="https://badgen.net/github/stars/TaleAi/markdown2html" />
+            <img alt="" style={style.img} src="https://badgen.net/github/stars/shenweiyan/Markdown2Html" />
           </a>
         </h3>
 
         <p style={style.lineHeight}>支持自定义样式的 Markdown 编辑器；</p>
         <p style={style.lineHeight}>支持微信公众号、知乎和稀土掘金；</p>
-        <h3 style={style.headerMargin}>我们</h3>
         <p style={style.lineHeight}>
           如果你喜欢我们的工具，欢迎关注
           <a
             id="nice-about-dialog-github"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/TaleAi/markdown2html"
+            href="https://github.com/shenweiyan/Markdown2Html"
           >
             &nbsp;GitHub&nbsp;
           </a>

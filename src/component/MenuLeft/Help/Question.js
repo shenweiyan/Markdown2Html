@@ -5,7 +5,7 @@ import "../common.css";
 class Question extends Component {
   handleClick = () => {
     const w = window.open("about:blank");
-    w.location.href = "https://github.com/TaleAi/markdown2html/issues/new";
+    w.location.href = "https://github.com/shenweiyan/Markdown2Html/issues/new";
   };
 
   render() {

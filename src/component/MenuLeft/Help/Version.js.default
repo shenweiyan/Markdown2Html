@@ -1,16 +1,18 @@
 import React, {Component} from "react";
+import {observer, inject} from "mobx-react";
 
 import "../common.css";
 
-class Question extends Component {
+@inject("dialog")
+@observer
+class Version extends Component {
   handleClick = () => {
-    const w = window.open("about:blank");
-    w.location.href = "";
+    this.props.dialog.setVersionOpen(true);
   };
 
   render() {
     return (
-      <div id="nice-menu-question" className="nice-menu-item" onClick={this.handleClick}>
+      <div id="nice-menu-version" className="nice-menu-item" onClick={this.handleClick}>
         <span>
           <span className="nice-menu-flag" />
           <span className="nice-menu-name">版本信息</span>
