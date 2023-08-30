@@ -1,0 +1,242 @@
+{
+  "name": "markdown2wechat",
+  "author": "tale",
+  "description": "a markdown editor with the function of style edition",
+  "version": "1.0.0",
+  "private": false,
+  "main": "lib/Lib.js",
+  "module": "lib/Lib.js",
+  "homepage": "http://md.aizhuanqian.online",
+  "license": "GPL-3.0",
+  "typings": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TaleAi/markdown2html"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "watch": "node ./watch.js",
+    "build": "export GENERATE_SOURCEMAP=false&&node --max_old_space_size=4096 scripts/build.js",
+    "test": "node scripts/test.js",
+    "analyze": "source-map-explorer build/static/js/*.js",
+    "lint": "eslint src --ext ts,tsx,js --fix",
+    "publish:npm": "cross-env NODE_ENV=production && rm -rf lib && mkdir lib && cross-env BABEL_ENV=production npx babel src --out-dir lib --copy-files",
+    "storybook": "npm run publish:npm && start-storybook -p 9001 -c .storybook"
+  },
+  "dependencies": {
+    "@sitdown/juejin": "^1.1.1",
+    "@sitdown/wechat": "^1.1.4",
+    "@sitdown/zhihu": "^1.1.2",
+    "@uiw/react-codemirror": "^1.0.28",
+    "ali-oss": "^6.1.1",
+    "antd": "^3.15.1",
+    "axios": "^0.18.0",
+    "diff-match-patch": "^1.0.4",
+    "highlight.js": "^9.15.6",
+    "juice": "^5.2.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "markdown-it": "^8.4.2",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-implicit-figures": "^0.9.0",
+    "markdown-it-imsize": "^2.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-ruby": "^0.1.1",
+    "markdown-it-table-of-contents": "^0.4.4",
+    "mathjax": "^3.0.1",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
+    "prettier": "^1.19.1",
+    "qiniu-js": "^2.5.4",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-helmet": "^5.2.1",
+    "sitdown": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "7.2.2",
+    "@storybook/react": "^4.1.11",
+    "@svgr/webpack": "^4.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.5",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-plugin-named-asset-import": "^0.3.1",
+    "babel-preset-react-app": "^7.0.1",
+    "bfj": "6.1.1",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.2.1",
+    "cross-env": "^6.0.3",
+    "css-loader": "^2.1.1",
+    "dotenv": "6.0.0",
+    "dotenv-expand": "4.2.0",
+    "eslint": "^6.5.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react-app": "^3.0.7",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "2.0.0",
+    "fork-ts-checker-webpack-plugin-alt": "0.4.14",
+    "fs-extra": "7.0.1",
+    "html-webpack-plugin": "4.0.0-alpha.2",
+    "husky": "^3.0.7",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.6.0",
+    "jest-pnp-resolver": "1.0.2",
+    "jest-resolve": "23.6.0",
+    "jest-watch-typeahead": "^0.2.1",
+    "lint-staged": "^9.4.0",
+    "mini-css-extract-plugin": "0.5.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "pnp-webpack-plugin": "1.2.1",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.5.0",
+    "postcss-safe-parser": "4.0.1",
+    "pretty-quick": "^1.11.1",
+    "raw-loader": "^4.0.0",
+    "react-app-polyfill": "^0.2.1",
+    "react-dev-utils": "^7.0.3",
+    "resolve": "1.10.0",
+    "sass-loader": "7.1.0",
+    "shelljs": "^0.8.3",
+    "source-map-explorer": "^2.0.1",
+    "style-loader": "0.23.1",
+    "styled-jsx": "^3.2.1",
+    "terser-webpack-plugin": "1.2.2",
+    "thread-loader": "^2.1.3",
+    "to-string-loader": "^1.1.5",
+    "url-loader": "1.1.2",
+    "webpack": "4.28.3",
+    "webpack-dev-server": "3.1.14",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "3.6.3"
+  },
+  "build": {
+    "productName": "Markdown2Html",
+    "appId": "com.aizhuanqian.www",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "files": [
+      "build",
+      "main.js",
+      "package.json"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "resolver": "jest-pnp-resolver",
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "watchPlugins": []
+  },
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ],
+    "env": {
+      "production": {
+        "plugins": [
+          [
+            "babel-plugin-inline-import",
+            {
+              "extensions": [
+                ".md"
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{jsx,txs,ts,js,json}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

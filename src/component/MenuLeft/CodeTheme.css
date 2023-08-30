@@ -1,0 +1,12 @@
+.nice-codetheme-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 12px 5px 6px;
+}
+.nice-codetheme-item-name {
+  margin-right: 10px;
+}
+.nice-codetheme-item-flag {
+  display: inline-block;
+  width: 16px;
+}

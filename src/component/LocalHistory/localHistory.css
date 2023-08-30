@@ -1,0 +1,66 @@
+.nice-md-local-history .ant-modal-body {
+    display: flex;
+    height: calc(100vh - 112px);
+}
+
+.nice-md-local-history .CodeMirror-merge,
+.nice-md-local-history .CodeMirror-merge .CodeMirror {
+    height: calc(100vh - 216px);
+}
+
+.nice-md-local-history .CodeMirror-merge-copy {
+    display: none;
+}
+
+.nice-md-local-history-preview {
+    width: 100%;
+    max-width: 776px;
+}
+
+.nice-md-local-history-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+.nice-md-local-history-btn-group button {
+    margin: 25px 10px;
+}
+
+.nice-md-local-history-btn-group button:last-child {
+    margin-right: 0;
+}
+
+.nice-md-local-history-nav {
+    width: 256px;
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 4px 0 0 4px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.nice-md-local-history-nav .ant-list-item {
+    border-bottom: 0;
+    padding: 17px 24px;
+}
+
+.nice-md-local-history-diff-content {
+    width: inherit;
+    background-color: rgba(245, 245, 245, 1);
+    overflow-y: scroll;
+    padding: 24px;
+    height: calc(100% - 56px);
+    color: #202020;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'source-code-pro', Menlo, 'Courier New', Consolas, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: contextual;
+    line-height: 25px;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "calt";
+    -webkit-font-smoothing: antialiased;
+}

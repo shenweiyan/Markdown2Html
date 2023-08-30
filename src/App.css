@@ -1,0 +1,132 @@
+.nice-app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "PingFang SC", BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serifhtml, body;
+  font-size: 16px;
+}
+
+.nice-text-container {
+  display: flex;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.nice-text-container-immersive {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.nice-md-editing-immersive {
+  padding: 0px;
+  width: 100%;
+}
+
+.nice-md-editing-immersive .CodeMirror-lines {
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .nice-md-editing-immersive .CodeMirror-lines {
+    padding: 20px 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nice-md-editing-immersive .CodeMirror-lines {
+    padding: 20px 15%;
+  }
+}
+
+/* 编辑器最多会被分成三份width:33.3%，当两份时根据flex-grow:1伸展 */
+.nice-md-editing,
+.nice-style-editing {
+  position: relative;
+  width: 33.3%;
+  flex-grow: 1;
+  word-wrap: break-word;
+  z-index: 1;
+}
+
+.nice-marked-text {
+  display: flex;
+  justify-content: center;
+  width: 33.3%;
+  flex-grow: 1;
+  padding: 20px;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.nice-marked-text-pc {
+  padding: 0;
+}
+
+.nice-wx-box {
+  overflow-y: auto;
+  padding: 25px 20px;
+  height: 100%;
+  width: 375px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+}
+
+.nice-wx-box-pc {
+  width: 100%;
+  padding: 20px 35px 20px 20px;
+  box-shadow: none;
+}
+
+.nice-style-editing-hide {
+  display: none;
+}
+
+.nice-md-editing-hide {
+  display: none;
+}
+
+.nice-marked-text-hide {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.08);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media print {
+  .nice-md-editing {
+    display: none;
+  }
+  .nice-navbar {
+    display: none;
+  }
+  .nice-sidebar {
+    display: none;
+  }
+  .nice-wx-box {
+    overflow: visible;
+    box-shadow: none;
+    width: 100%;
+  }
+  .nice-style-editing {
+    display: none;
+  }
+  #nice-rich-text {
+    padding: 0 !important;
+  }
+  .nice-footer-container {
+    display: none;
+  }
+}

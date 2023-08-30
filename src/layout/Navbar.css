@@ -1,0 +1,55 @@
+.nice-navbar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex: none;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  background: white;
+}
+
+.nice-toolbar {
+  height: 40px;
+  padding: 10px 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.nice-left-nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nice-right-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nice-btn-group-margin {
+  margin-right: 10px;
+}
+
+.nice-btn-group-right {
+  margin-right: 20px;
+}
+
+.nice-icon-bar {
+  margin-top: 5;
+}
+
+.nice-title {
+  padding: 0 10px 0 20px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia,
+    Times, "Times New Roman", serif;
+}
+
+.nice-navbar-hide {
+  display: none;
+}
