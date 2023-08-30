@@ -36,7 +36,7 @@ class VersionDialog extends Component {
 
   handleDocs = () => {
     const w = window.open("about:blank");
-    w.location.href = "https://aizhuanqian.online/mardown2html";
+    w.location.href = "https://github.com/shenweiyan/Markdown2Html";
   };
 
   componentDidMount = async () => {
@@ -44,13 +44,14 @@ class VersionDialog extends Component {
       const data = {
         versionId: 1,
         versionNumber: "1.0.0",
-        versionTimeline: ["2020-09-09 优化排版", "2020-09-08 fork自markdown nice"],
+        versionTimeline: ["2023-09-01 优化部分信息", "2023-08-30 Fork 自 markdown2html"],
         recommend: {
-          link: "https://www.aizhuanqian.com",
-          mainInfo: "欢迎关注我的博客",
+          link: "https://github.com/shenweiyan/Knowledge-Garden",
+          mainInfo: "欢迎关注我的知识花园",
         },
-        specialInfo:
-          '<div style="display:flex;justify-content:center;align-items:center;"><img style="width:50%;" src="http://md.aizhuanqian.online/img/wechat_qr.df324554.jpeg"/></div>',
+        specialInfo: ''
+        //specialInfo:
+        //  '<div style="display:flex;justify-content:center;align-items:center;"><img style="width:50%;" src="http://md.aizhuanqian.online/img/wechat_qr.df324554.jpeg"/></div>',
       };
       const newestVersion = localStorage.getItem(NEWEST_VERSION);
       if (data.versionNumber !== newestVersion) {
@@ -66,7 +67,7 @@ class VersionDialog extends Component {
   render() {
     return (
       <Modal
-        title="版本更新"
+        title="使用说明"
         visible={this.props.dialog.isVersionOpen}
         onOk={this.handleOk}
         onCancel={this.handleCancel}
@@ -95,11 +96,11 @@ class VersionDialog extends Component {
               id="nice-version-dialog-doc"
               style={{fontWeight: "bold"}}
               alt=""
-              href="https://aizhuanqian.online/mardown2html"
+              href="https://github.com/shenweiyan/Markdown2Html"
               rel="noopener noreferrer"
               target="_blank"
             >
-              用户与开发者文档
+              本仓库源码与说明
             </a>
           </Timeline.Item>
           {this.state.recommend && (
