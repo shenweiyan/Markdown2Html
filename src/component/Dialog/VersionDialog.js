@@ -44,7 +44,7 @@ class VersionDialog extends Component {
       const data = {
         versionId: 1,
         versionNumber: "1.0.0",
-        versionTimeline: ["2023-09-01 优化部分信息", "2023-08-30 Fork 自 markdown2html"],
+        versionTimeline: ["2023-09-01 优化部分配置与信息", "2023-08-30 Fork 自 markdown2html"],
         recommend: {
           link: "https://github.com/shenweiyan/Knowledge-Garden",
           mainInfo: "欢迎关注我的知识花园",
@@ -67,7 +67,7 @@ class VersionDialog extends Component {
   render() {
     return (
       <Modal
-        title="使用说明"
+        title="版本更新与说明"
         visible={this.props.dialog.isVersionOpen}
         onOk={this.handleOk}
         onCancel={this.handleCancel}
@@ -79,8 +79,22 @@ class VersionDialog extends Component {
         destroyOnClose
       >
         <Timeline>
+          <Timeline.Item dot={<SvgIcon name="environment" style={style.svgIcon} />}>
+              <strong>更多版本更新与说明信息请查看
+                <a
+                  id="more-info"
+                  style={{fontWeight: "bold", borderBottom: "solid"}}
+                  alt=""
+                  href="https://github.com/shenweiyan/Markdown2Html"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  这里
+                </a>
+              </strong>
+          </Timeline.Item>
           {this.state.versionTimeline.map((version, index) => {
-            if (index === 0) {
+            /*if (index === 0) {
               return (
                 <Timeline.Item key={index} dot={<SvgIcon name="environment" style={style.svgIcon} />}>
                   <strong>{version}</strong>
@@ -88,7 +102,8 @@ class VersionDialog extends Component {
               );
             } else {
               return <Timeline.Item key={index}>{version}</Timeline.Item>;
-            }
+            }*/
+            return <Timeline.Item key={index}>{version}</Timeline.Item>;
           })}
           <Timeline.Item>
             了解更多，请查看
