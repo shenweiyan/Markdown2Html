@@ -14,6 +14,7 @@ import markdownItLinkfoot from "./markdown-it-linkfoot";
 import markdownItImageFlow from "./markdown-it-imageflow";
 import highlightjs from "./langHighlight";
 import markdownItLiReplacer from "./markdown-it-li";
+import markdownUrlAddSpan from "./markdown-it-urlspan";
 
 export const axiosGithub = axios.create({
   baseURL: "https://api.github.com",
@@ -81,6 +82,7 @@ export const markdownParserWechat = new MarkdownIt({
 });
 
 markdownParserWechat
+  .use(markdownUrlAddSpan)
   .use(markdownItSpan) // 在标题标签中添加span
   .use(markdownItTableContainer) // 在表格外部添加容器
   .use(markdownItRemovepre) // 移除代码段中的 pre code
@@ -123,6 +125,7 @@ export const markdownParser = new MarkdownIt({
 });
 
 markdownParser
+  .use(markdownUrlAddSpan)
   .use(markdownItSpan) // 在标题标签中添加span
   .use(markdownItTableContainer) // 在表格外部添加容器
   .use(markdownItMath) // 数学公式
