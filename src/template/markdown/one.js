@@ -88,7 +88,7 @@ export default `/* 全局属性
 /* 链接 
  * border-bottom: 1px solid #009688;
  */
-#nice a {
+#nice a span {
   color: rgb(239, 112, 96);
   border-bottom: 1px solid rgb(239, 112, 96);
 }

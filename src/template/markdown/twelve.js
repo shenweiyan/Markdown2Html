@@ -115,7 +115,7 @@ export default `#nice {
   color:rgb(89,89,89);
 }
 /* 链接 */
-#nice a {
+#nice a span {
   color: #48b378;
   text-decoration:none;
   border-bottom: 1px solid #48b378;

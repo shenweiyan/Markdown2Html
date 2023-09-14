@@ -101,7 +101,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
 /* 链接 
  * border-bottom: 1px solid #009688;
  */
-#nice a {
+#nice a span {
 }
 
 /* 加粗 */

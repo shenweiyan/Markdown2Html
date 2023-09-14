@@ -118,7 +118,7 @@ export default `/* 全局属性 */
   padding: 3px 0;
 }
 
-#nice a {
+#nice a span {
   color: hsl(187, 100%, 45%);
   font-weight: normal;
   border-bottom-color: hsl(187, 100%, 45%);

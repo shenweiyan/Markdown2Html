@@ -152,7 +152,7 @@ color:#595959;
 /* 链接 
 * border-bottom: 1px solid #009688;
 */
-#nice a {
+#nice a span {
   color: #664D9D;
   font-weight: normal;
   border-bottom: 1px solid #664D9D;

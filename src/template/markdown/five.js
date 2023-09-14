@@ -152,7 +152,7 @@ export default `/*自定义样式，实时生效*/
 /* 链接 
 * border-bottom: 1px solid #009688;
 */
-#nice a {
+#nice a span {
     color: rgb(248, 57, 41);
     font-weight: 400;
     border-bottom: 1px solid rgb(248, 57, 41);

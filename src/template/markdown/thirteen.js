@@ -216,7 +216,7 @@ color:#2b2b2b;
 /* 链接
 * border-bottom: 1px solid #009688;
 */
-#nice a {
+#nice a span {
   color: #40B8FA;
   font-weight: normal;
   border-bottom: 1px solid #3BAAFA;

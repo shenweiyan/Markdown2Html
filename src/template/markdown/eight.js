@@ -87,7 +87,7 @@ export default `/*自定义样式，实时生效*/
 }
 
 /* 链接 */
-#nice a {
+#nice a span {
   border: none;
   text-decoration: none;
   color: #dda52d;
