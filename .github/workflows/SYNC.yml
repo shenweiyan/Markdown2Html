@@ -1,0 +1,37 @@
+name: PushToGitee
+on:
+  workflow_run:
+    workflows: BuildAndDeploy # 需要监听的流程名字
+    types: completed
+
+jobs:
+  push-to-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        run: |
+          echo "Run Clone Step!"
+          git config --global init.defaultBranch main
+          git init
+          git remote add origin https://shenweiyan:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git fetch --all
+          for branch in `git branch -a | grep remotes | grep -v HEAD`; do
+            git branch --track ${branch##*/} $branch
+          done
+        env:
+          GITHUB_REPOSITORY: shenweiyan/Markdown2Html
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Push to Gitee
+        run: |
+          #echo "stop!"
+          remote_repo="https://shenweiyan:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
+          git remote add gitee "${remote_repo}"
+          git show-ref # useful for debugging
+          git branch --verbose
+          # publish all
+          git push --all --force gitee
+          git push --tags --force gitee
+        env:
+          GITEE_REPOSITORY: shenweiyan/Markdown2Html
+          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
