@@ -16,14 +16,14 @@ export default `/*自定义样式，实时生效*/
  * 字间距 letter-spacing: 3px;
  * 对齐 text-align: left;
  * 颜色 color: #3e3e3e;
- * 字体大小 font-size: 16px;
+ * 字体大小 font-size: 14px;
  * 首行缩进 text-indent: 2em;
  */
 #nice p {
   box-sizing: border-box;
   margin-bottom: 16px;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   text-align: start;
   white-space: normal;
   text-size-adjust: auto;
@@ -136,7 +136,7 @@ export default `/*自定义样式，实时生效*/
 /* 列表内容，不要设置li
  */
 #nice li section {
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
 }
 
@@ -157,7 +157,7 @@ export default `/*自定义样式，实时生效*/
 
 /* 引用文字 */
 #nice blockquote p {
-  font-size: 15px;
+  font-size: 14px;
   font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
   color: rgb(119, 119, 119);
   line-height: 1.75em;
