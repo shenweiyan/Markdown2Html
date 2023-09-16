@@ -49,13 +49,14 @@ class Theme extends React.Component {
       {themeId: "6", name: "蓝莹", css: TEMPLATE.theme.six},
       {themeId: "7", name: "兰青", css: TEMPLATE.theme.seven},
       {themeId: "8", name: "山吹", css: TEMPLATE.theme.eight},
-      {themeId: "9", name: "前端之巅同款", css: TEMPLATE.theme.nine},
+      {themeId: "9", name: "技术控", css: TEMPLATE.theme.jsk},
       {themeId: "10", name: "极客黑", css: TEMPLATE.theme.ten},
       {themeId: "11", name: "蔷薇紫", css: TEMPLATE.theme.eleven},
-      {themeId: "12", name: "萌绿", css: TEMPLATE.theme.twelve},
+      {themeId: "12", name: "萌绿风", css: TEMPLATE.theme.twelve},
       {themeId: "13", name: "全栈蓝", css: TEMPLATE.theme.thirteen},
       {themeId: "14", name: "极简黑", css: TEMPLATE.theme.fourteen},
       {themeId: "15", name: "橙蓝风", css: TEMPLATE.theme.fifteen},
+      {themeId: "16", name: "前端之巅同款", css: TEMPLATE.theme.nine},
       {themeId: "custom", name: "自定义", css: TEMPLATE.theme.custom},
     ];
 
