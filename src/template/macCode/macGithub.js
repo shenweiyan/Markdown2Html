@@ -107,7 +107,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 #nice .custom:before {
   content: '';
   display:block;
-  background: url(https://my-wechat.mdnice.com/point.png);
+  background: url(https://shub-1251708715.cos.ap-guangzhou.myqcloud.com/md2html/point.svg);
   height: 30px;
   width: 100%;
   background-size:40px;
