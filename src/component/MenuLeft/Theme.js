@@ -49,7 +49,7 @@ class Theme extends React.Component {
       {themeId: "6", name: "蓝莹", css: TEMPLATE.theme.six},
       {themeId: "7", name: "兰青", css: TEMPLATE.theme.seven},
       {themeId: "8", name: "山吹", css: TEMPLATE.theme.eight},
-      {themeId: "9", name: "技术控", css: TEMPLATE.theme.jsk},
+      {themeId: "9", name: "网格黑", css: TEMPLATE.theme.wgh},
       {themeId: "10", name: "极客黑", css: TEMPLATE.theme.ten},
       {themeId: "11", name: "蔷薇紫", css: TEMPLATE.theme.eleven},
       {themeId: "12", name: "萌绿风", css: TEMPLATE.theme.twelve},

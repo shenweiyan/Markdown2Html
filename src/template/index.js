@@ -15,7 +15,7 @@ import twelve from "./markdown/twelve";
 import thirteen from "./markdown/thirteen";
 import fourteen from "./markdown/fourteen";
 import fifteen from "./markdown/fifteen";
-import jsk from "./markdown/jsk";
+import wgh from "./markdown/wgh";
 
 import content from "./content.md";
 
@@ -54,7 +54,7 @@ export default {
     thirteen,
     fourteen,
     fifteen,
-    jsk,
+    wgh,
     custom,
   },
   code: {

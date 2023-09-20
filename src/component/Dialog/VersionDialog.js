@@ -44,7 +44,7 @@ class VersionDialog extends Component {
       const data = {
         versionId: 1,
         versionNumber: "1.0.0",
-        versionTimeline: ["2023-09-14 解决超链接文字复制到公众号颜色失效的问题", "2023-09-01 优化部分配置与信息", "2023-08-30 Fork 自 markdown2html"],
+        versionTimeline: ["2023-09-20 增加网格黑主题", "2023-09-14 解决超链接文字复制到公众号颜色失效的问题", "2023-09-01 优化部分配置与信息", "2023-08-30 Fork 自 markdown2html"],
         recommend: {
           link: "https://github.com/shenweiyan/Knowledge-Garden",
           mainInfo: "欢迎关注我的知识花园",
