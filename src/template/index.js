@@ -5,7 +5,7 @@ import two from "./markdown/two";
 import three from "./markdown/three";
 import four from "./markdown/four";
 import five from "./markdown/five";
-import six from "./markdown/six";
+// import six from "./markdown/six";
 import seven from "./markdown/seven";
 import eight from "./markdown/eight";
 import nine from "./markdown/nine";
@@ -16,7 +16,7 @@ import thirteen from "./markdown/thirteen";
 import fourteen from "./markdown/fourteen";
 import fifteen from "./markdown/fifteen";
 import wgh from "./markdown/wgh";
-
+import temp from "./markdown/temp";
 import content from "./content.md";
 
 import atomOneDark from "./code/atomOneDark";
@@ -44,7 +44,7 @@ export default {
     three,
     four,
     five,
-    six,
+    // six,
     seven,
     eight,
     nine,
@@ -56,6 +56,7 @@ export default {
     fifteen,
     wgh,
     custom,
+    temp
   },
   code: {
     atomOneDark,
@@ -69,7 +70,7 @@ export default {
     macGithub,
     macMonokai,
     macVs2015,
-    macXcode,
+    macXcode
   },
-  content,
+  content
 };

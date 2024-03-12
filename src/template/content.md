@@ -2,13 +2,17 @@
 
 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
 
-## 1 Markdown2Html 简介
+## 1 Markdown Nice 简介
 
 - 支持自定义样式的 Markdown 编辑器
 - 支持微信公众号、知乎和稀土掘金
-- 支持导出 PDF 和 markdown
+- 支持以 PDF 和 Markdown 格式的文件导出
+
+![](https://my-wechat.mdnice.com/wechat.jpg)
 
 ## 2 主题
+
+**https://preview.mdnice.com/themes/**
 
 欢迎提交主题，提供更多文章示例~~
 
@@ -49,15 +53,7 @@
 2. 有序列表 2
 3. 有序列表 3
 
-### 3.4 引用
-
-引用的格式是在符号`>`后面书写文字。如下：
-
-> 读一本好书，就是在和高尚的人谈话。 ——歌德
-
-> 雇用制度对工人不利，但工人根本无力摆脱这个制度。 ——阮一峰
-
-### 3.5 粗体和斜体
+### 3.4 粗体和斜体
 
 粗体的使用是在需要加粗的文字前后各加两个`*`。
 
@@ -77,11 +73,47 @@ _这个是斜体_
 
 这个是正常现象，请参考[加粗 Issue](https://github.com/markdown-it/markdown-it/issues/410 "加粗 Issue")。
 
-### 3.6 链接
+### 3.5 链接
 
 微信公众号仅支持公众号文章链接，即域名为`https://mp.weixin.qq.com/`的合法链接。使用方法如下所示：
 
 对于该论述，欢迎读者查阅之前发过的文章，[你是《未来世界的幸存者》么？](https://mp.weixin.qq.com/s/s5IhxV2ooX3JN_X416nidA)
+
+### 3.6 引用
+
+引用的格式是在符号 `>` 后面书写文字，文字的内容可以包含标题、链接、图片、粗体和斜体等。
+
+一级引用如下：
+
+> ### 一级引用示例
+> 
+> 读一本好书，就是在和高尚的人谈话。 **——歌德**
+> 
+> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+> 
+> ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
+
+当使用多个 `>` 符号时，就会变成多级引用
+
+二级引用如下：
+
+>> ### 二级引用示例
+>>
+>> 读一本好书，就是在和高尚的人谈话。 **——歌德**
+>>
+>> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+>> 
+>> ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
+
+三级引用如下：
+
+>>> ### 三级引用示例
+>>>
+>>> 读一本好书，就是在和高尚的人谈话。 **——歌德**
+>>>
+>>> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+>>> 
+>>> ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
 
 ### 3.7 分割线
 
@@ -115,21 +147,32 @@ _这个是斜体_
 
 ### 3.10 图片
 
-插入图片，如果是行内图片则无图例，否则有图例，格式如下：
+插入图片，如果是行内图片则无图例，否则有图例，格式如下：    
 
-![这里写图片描述](https://my-wechat.mdnice.com/logo.png)
+```
+![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
+```
+![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
 
 可以通过在图片尾部添加宽度和高度控制图片大小，用法如下：
 
-![同时设置宽度和高度](https://my-wechat.mdnice.com/logo.png =150x150)
+```
+![同时设置宽度和高度](https://shub.weiyan.tech/md2html/markdown.png =150x150)
+```
+![同时设置宽度和高度](https://shub.weiyan.tech/md2html/markdown.png =150x150)
 
-![只设置宽度，推荐使用百分比](https://my-wechat.mdnice.com/logo.png =40%x)
+```
+![只设置宽度，推荐使用百分比](https://shub.weiyan.tech/md2html/markdown.png =40%x)
+```
+![只设置宽度，推荐使用百分比](https://shub.weiyan.tech/md2html/markdown.png =40%x)
 
 该语法比较特殊，其他 Markdown 编辑器不完全通用。
 
-支持 jpg、png、gif、svg 等图片格式，**其中 svg 文件仅可在微信公众平台中使用**，svg 文件示例如下：
-
-![](https://my-wechat.mdnice.com/i-am-svg.svg)
+支持 jpg、png、gif、svg 等图片格式，**其中 svg 文件仅可在微信公众平台中使用**，svg 文件示例如下：    
+```
+![](https://shub.weiyan.tech/md2html/a-am-svg.svg)
+```
+![](https://shub.weiyan.tech/md2html/a-am-svg.svg)
 
 - 支持图片**拖拽和截图粘贴**到编辑器中上传，上传时使用当前选择的图床。
 - 可使用**格式->图片**上传本地图片，网站目前支持「图壳」图床，失败率低，但是只可保存一天用于排版
@@ -138,7 +181,7 @@ _这个是斜体_
 
 图片还可以和链接嵌套使用，能够实现推荐卡片的效果，用法如下：
 
-[![Markdown2Html 最全功能介绍](https://my-wechat.mdnice.com/dance.gif)](https://aizhuanqian.online/mardown2html)
+[![Markdown Nice 最全功能介绍](https://shub.weiyan.tech/md2html/dance.gif)](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
 
 ## 4. 特殊语法
 
@@ -161,7 +204,7 @@ _这个是斜体_
 
 ### 4.2 代码块
 
-> 支持平台：微信代码主题仅支持微信公众号！其他主题无限制。
+> 支持平台：微信公众号、知乎。
 
 如果在一个行内需要引用代码，只要用反引号引起来就好，如下：
 
@@ -270,7 +313,7 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 通过`<![](url),![](url)>`这种语法设置横屏滑动滑动片，具体用法如下：
 
-<![蓝1](https://my-wechat.mdnice.com/blue.jpg),![绿2](https://my-wechat.mdnice.com/green.jpg),![红3](https://my-wechat.mdnice.com/red.jpg)>
+<![蓝1](https://shub.weiyan.tech/md2html/blue.jpg),![绿2](https://shub.weiyan.tech/md2html/green.jpg),![红3](https://shub.weiyan.tech/md2html/red.jpg)>
 
 ## 5 其他语法
 
@@ -287,4 +330,4 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 ### 5.3 更多文档
 
-更多文档请参考 [markdown2html-docs](https://aizhuanqian.online/mardown2html "更多文档")
+更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")
