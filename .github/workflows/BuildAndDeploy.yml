@@ -36,4 +36,4 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           full_commit_message: ${{ github.event.head_commit.message }}
-          cname: 'md.weiyan.dev'
+          cname: 'md.weiyan.cc'
