@@ -28,3 +28,26 @@ Fork 自 [markdown2html](https://github.com/TaleAi/markdown2html)，略有调整
 
 - [markdown2html](https://github.com/TaleAi/markdown2html)：markdown2html
 - [markdown nice](https://mdnice.com/)：markdown nice
+
+## 本项目是 react 框架
+
+## 使用方法
+- 本地部署npm16的版本
+```angular2html
+npm install 
+
+nohup npm run start
+```
+
+## 外部访问
+- 端口是 3123
+- 访问地址是 http://localhost:3123/
+- 使用 post 方法
+- header: Content-Type: application/json
+```python
+    payload = {
+        "markdown_raw": f"{result}",
+        "markdown_type": markdown_type
+    }
+```
+- 
