@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {observer, inject} from "mobx-react";
+import React, { Component } from "react";
+import { observer, inject } from "mobx-react";
 import classnames from "classnames";
 
 import File from "../component/MenuLeft/File";
@@ -16,11 +16,11 @@ import "./Navbar.css";
 @observer
 class Navbar extends Component {
   render() {
-    const {title, token} = this.props;
-    const {isImmersiveEditing} = this.props.view;
+    const { title, token } = this.props;
+    const { isImmersiveEditing } = this.props.view;
     const niceNavbarClass = classnames({
       "nice-navbar": true,
-      "nice-navbar-hide": isImmersiveEditing,
+      "nice-navbar-hide": isImmersiveEditing
     });
     return (
       <div className={niceNavbarClass}>

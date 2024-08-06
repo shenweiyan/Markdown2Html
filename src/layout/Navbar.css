@@ -25,9 +25,9 @@
 
 .nice-right-nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex: 1;
+  width: 800px;
+  margin-right: 400px;
 }
 
 .nice-btn-group-margin {
@@ -39,7 +39,7 @@
 }
 
 .nice-icon-bar {
-  margin-top: 5;
+  margin-top: 5px;
 }
 
 .nice-title {
