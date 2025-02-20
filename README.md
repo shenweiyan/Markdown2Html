@@ -16,7 +16,6 @@ Fork 自 [markdown2html](https://github.com/TaleAi/markdown2html)，略有调整
 - 支持导出 pdf 和 markdown
 - 欢迎在线使用：
   - https://md.weiyan.cc/
-  - https://md.bioitee.com/
 
 ## 主题
 
