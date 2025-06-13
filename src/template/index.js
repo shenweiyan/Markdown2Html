@@ -14,6 +14,7 @@ import eleven from "./markdown/eleven";
 import twelve from "./markdown/twelve";
 import thirteen from "./markdown/thirteen";
 import fourteen from "./markdown/fourteen";
+import fourteen_rocco from "./markdown/fourteen_rocco";
 import fifteen from "./markdown/fifteen";
 import wgh from "./markdown/wgh";
 
@@ -55,6 +56,7 @@ export default {
     fourteen,
     fifteen,
     wgh,
+    fourteen_rocco,
     custom,
   },
   code: {
