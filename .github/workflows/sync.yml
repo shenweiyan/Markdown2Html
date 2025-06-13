@@ -13,19 +13,19 @@ jobs:
           echo "Run Clone Step!"
           git config --global init.defaultBranch main
           git init
-          git remote add origin https://shenweiyan:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote add origin https://kebinzhi:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git fetch --all
           for branch in `git branch -a | grep remotes | grep -v HEAD`; do
             git branch --track ${branch##*/} $branch
           done
         env:
-          GITHUB_REPOSITORY: shenweiyan/Markdown2Html
+          GITHUB_REPOSITORY: kebinzhi/Markdown2Html
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Push to Gitee
         run: |
           #echo "stop!"
-          remote_repo="https://shenweiyan:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
+          remote_repo="https://kebinzhi:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
           git remote add gitee "${remote_repo}"
           git show-ref # useful for debugging
           git branch --verbose
@@ -33,12 +33,12 @@ jobs:
           git push --all --force gitee
           git push --tags --force gitee
         env:
-          GITEE_REPOSITORY: shenweiyan/Markdown2Html
+          GITEE_REPOSITORY: kebinzhi/Markdown2Html
           GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
 
       - name: Push to Gitcode
         run: |
-          remote_repo="https://shenweiyan:${GITCODE_PASSWORD}@gitcode.com/${GITCODE_REPOSITORY}.git"
+          remote_repo="https://kebinzhi:${GITCODE_PASSWORD}@gitcode.com/${GITCODE_REPOSITORY}.git"
           git remote add gitcode "${remote_repo}"
           git show-ref
           git branch --verbose
@@ -46,5 +46,5 @@ jobs:
           git push --all --force gitcode
           git push --tags --force gitcode
         env:
-          GITCODE_REPOSITORY: shenweiyan/Markdown2Html
+          GITCODE_REPOSITORY: kebinzhi/Markdown2Html
           GITCODE_PASSWORD: ${{ secrets.GITCODE_PAT }}
