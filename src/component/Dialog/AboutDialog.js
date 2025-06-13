@@ -42,10 +42,10 @@ class AboutDialog extends Component {
             id="nice-about-dialog-star"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/shenweiyan/Markdown2Html"
+            href="https://github.com/kebinzhi/Markdown2Html"
             style={style.noBorder}
           >
-            <img alt="" style={style.img} src="https://badgen.net/github/stars/shenweiyan/Markdown2Html" />
+            <img alt="" style={style.img} src="https://badgen.net/github/stars/kebinzhi/Markdown2Html" />
           </a>
         </h3>
 
@@ -57,7 +57,7 @@ class AboutDialog extends Component {
             id="nice-about-dialog-github"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/shenweiyan/Markdown2Html"
+            href="https://github.com/kebinzhi/Markdown2Html"
           >
             &nbsp;GitHub&nbsp;
           </a>
