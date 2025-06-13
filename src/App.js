@@ -378,8 +378,6 @@ class App extends Component {
                 >
                   <section
                     id={LAYOUT_ID}
-                    data-tool="markdown2wechat编辑器"
-                    data-website="https://aizhuanqian.com"
                     dangerouslySetInnerHTML={{
                       __html: parseHtml,
                     }}
