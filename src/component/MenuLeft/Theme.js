@@ -57,7 +57,7 @@ class Theme extends React.Component {
       {themeId: "14", name: "极简黑", css: TEMPLATE.theme.fourteen},
       {themeId: "15", name: "橙蓝风", css: TEMPLATE.theme.fifteen},
       {themeId: "16", name: "前端之巅同款", css: TEMPLATE.theme.nine},
-      {themeId: "17", name: "极简黑-Rocco", css: TEMPLATE.fourteen_rocco},
+      {themeId: "17", name: "极简黑-Rocco", css: TEMPLATE.theme.fourteen_rocco},
       {themeId: "custom", name: "自定义", css: TEMPLATE.theme.custom},
     ];
 
