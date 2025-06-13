@@ -6,7 +6,7 @@
   "private": false,
   "main": "lib/Lib.js",
   "module": "lib/Lib.js",
-  "homepage": "http://md.aizhuanqian.online",
+  "homepage": "https://kebinzhi.github.io/Markdown2Html/",
   "license": "GPL-3.0",
   "typings": "./lib/index.d.ts",
   "repository": {
