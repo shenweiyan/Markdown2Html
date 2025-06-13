@@ -1,6 +1,4 @@
 <div align="center">
-<a href="https://md.weiyan.dev">
-<img width="500" src="./screenshot.png"/>
 </a>
 </div>
 <h1 align="center">Markdown2Html</h1>
