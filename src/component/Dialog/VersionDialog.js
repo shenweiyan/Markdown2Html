@@ -36,7 +36,7 @@ class VersionDialog extends Component {
 
   handleDocs = () => {
     const w = window.open("about:blank");
-    w.location.href = "https://github.com/shenweiyan/Markdown2Html";
+    w.location.href = "https://github.com/kebinzhi/Markdown2Html";
   };
 
   componentDidMount = async () => {
@@ -45,13 +45,7 @@ class VersionDialog extends Component {
         versionId: 1,
         versionNumber: "1.0.0",
         versionTimeline: ["2023-09-20 增加网格黑主题", "2023-09-14 解决超链接文字复制到公众号颜色失效的问题", "2023-09-01 优化部分配置与信息", "2023-08-30 Fork 自 markdown2html"],
-        recommend: {
-          link: "https://github.com/shenweiyan/Knowledge-Garden",
-          mainInfo: "欢迎关注我的知识花园",
-        },
         specialInfo: ''
-        //specialInfo:
-        //  '<div style="display:flex;justify-content:center;align-items:center;"><img style="width:50%;" src="http://md.aizhuanqian.online/img/wechat_qr.df324554.jpeg"/></div>',
       };
       const newestVersion = localStorage.getItem(NEWEST_VERSION);
       if (data.versionNumber !== newestVersion) {
@@ -85,7 +79,7 @@ class VersionDialog extends Component {
                   id="more-info"
                   style={{fontWeight: "bold", borderBottom: "solid"}}
                   alt=""
-                  href="https://github.com/shenweiyan/Markdown2Html"
+                  href="https://github.com/kebinzhi/Markdown2Html"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -111,7 +105,7 @@ class VersionDialog extends Component {
               id="nice-version-dialog-doc"
               style={{fontWeight: "bold"}}
               alt=""
-              href="https://github.com/shenweiyan/Markdown2Html"
+              href="https://github.com/kebinzhi/Markdown2Html"
               rel="noopener noreferrer"
               target="_blank"
             >
