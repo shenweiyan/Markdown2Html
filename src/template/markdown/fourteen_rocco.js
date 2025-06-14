@@ -161,7 +161,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
  * list-style-type: square|circle|disc;
  */
 #nice ul {
-  list-style-type: square;
+  list-style-type: disc;
 }
 
 /* 无序二级列表 */
