@@ -10,7 +10,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
   font-size: var(--text-size);
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Arial, Microsoft YaHei, Segoe UI, Hiragino Sans GB, Helvetica Neue, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --text-color: #333; /* #151515 #505050*/
+  --text-color: #333; /* #151515 #262626 #505050*/
   color: var(--text-color);
   --title-color: #333;
 }
