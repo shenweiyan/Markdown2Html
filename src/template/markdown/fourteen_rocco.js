@@ -165,7 +165,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
 }
 
 /* 无序二级列表 */
-#nice ul li ul li {
+#nice ul li ul {
   list-style-type: circle;
 }
 
