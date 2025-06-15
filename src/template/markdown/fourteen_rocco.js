@@ -139,7 +139,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
   padding: 2px 10px;
   width: fit-content;
   font-size: 18px;
-  margin: 60px auto 10px;
+  margin: 60px auto 15px;
 }
 #nice h3 strong {
   color: #fff;
