@@ -18,7 +18,7 @@ export default `/*默认样式，最佳实践*/
 /*段落*/
 #nice p {
   font-size: 16px;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   line-height: 30px;
   color: #333;
 }
@@ -76,7 +76,7 @@ export default `/*默认样式，最佳实践*/
 /*列表*/
 #nice ul,
 #nice ol {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   padding-left: 25px;
   color: #333;
 }
@@ -92,7 +92,7 @@ export default `/*默认样式，最佳实践*/
 }
 
 #nice li section {
-  margin-bottom: 13px;
+  margin:6px 0;
   line-height: 30px;
   text-align: left;
   color: rgb(1,1,1); /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
