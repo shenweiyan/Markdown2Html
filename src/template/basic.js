@@ -92,7 +92,7 @@ export default `/*默认样式，最佳实践*/
 }
 
 #nice li section {
-  margin:6px 0;
+  margin-bottom: 12px;
   line-height: 30px;
   text-align: left;
   color: rgb(1,1,1); /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
@@ -117,7 +117,7 @@ export default `/*默认样式，最佳实践*/
 }
 
 #nice blockquote p {
-  margin: 0px;
+  margin: 6px 0; /*=12px/2*/
   color: #333;
   line-height: 30px;
 }
