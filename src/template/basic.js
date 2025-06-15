@@ -5,24 +5,22 @@ export default `/*默认样式，最佳实践*/
   font-size: 16px;
   color: black;
   padding: 0 10px;
-  line-height: 1.6;
+  line-height: 1.8;
   word-spacing: 0px;
   letter-spacing: 0px;
   word-break: break-word;
   word-wrap: break-word;
   text-align: left;
-  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  /* margin-top: -10px; 解决开头空隙过大问题*/
+  font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Arial, Microsoft YaHei, Segoe UI, Hiragino Sans GB, Helvetica Neue, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  /*margin-top: -10px;*/ /*解决开头空隙过大问题*/
 }
 
 /*段落*/
 #nice p {
   font-size: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin: 0;
-  line-height: 26px;
-  color: black;
+  margin-bottom: 16px;
+  line-height: 30px;
+  color: #333;
 }
 
 /*标题*/
@@ -36,7 +34,7 @@ export default `/*默认样式，最佳实践*/
   margin-bottom: 15px;
   padding: 0px;
   font-weight: bold;
-  color: black;
+  color: #333;
 }
 #nice h1 {
   font-size: 24px;
@@ -66,7 +64,7 @@ export default `/*默认样式，最佳实践*/
   display: none;
 }
 
-#nice h1 .suffix
+#nice h1 .suffix,
 #nice h2 .suffix,
 #nice h3 .suffix,
 #nice h4 .suffix,
@@ -81,7 +79,7 @@ export default `/*默认样式，最佳实践*/
   margin-top: 8px;
   margin-bottom: 8px;
   padding-left: 25px;
-  color: black;
+  color: #333;
 }
 #nice ul {
   list-style-type: disc;
@@ -95,9 +93,8 @@ export default `/*默认样式，最佳实践*/
 }
 
 #nice li section {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 26px;
+  margin-bottom: 16px;
+  line-height: 30px;
   text-align: left;
   color: rgb(1,1,1); /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
   font-weight: 500;
@@ -122,13 +119,13 @@ export default `/*默认样式，最佳实践*/
 
 #nice blockquote p {
   margin: 0px;
-  color: black;
-  line-height: 26px;
+  color: #333;
+  line-height: 30px;
 }
 
 #nice .table-of-contents a {
   border: none;
-  color: black;
+  color: #333;
   font-weight: normal;
 }
 
@@ -144,25 +141,25 @@ export default `/*默认样式，最佳实践*/
 /*加粗*/
 #nice strong {
   font-weight: bold;
-  color: black;
+  color: #333;
 }
 
 /*斜体*/
 #nice em {
   font-style: italic;
-  color: black;
+  color: #333;
 }
 
 /*加粗斜体*/
 #nice em strong {
   font-weight: bold;
-  color: black;
+  color: #333;
 }
 
 /*删除线*/
 #nice del {
   font-style: italic;
-  color: black;
+  color: #333;
 }
 
 /*分隔线*/
@@ -188,7 +185,7 @@ export default `/*默认样式，最佳实践*/
   -webkit-overflow-scrolling: touch;
 }
 #nice pre code span {
-  line-height: 26px;
+  line-height: 30px;
 }
 
 /*行内代码*/
@@ -301,8 +298,8 @@ export default `/*默认样式，最佳实践*/
 #nice .code-snippet__fix .code-snippet__line-index li {
   list-style-type: none;
   text-align: right;
-  line-height: 26px;
-  color: black;
+  line-height: 30px;
+  color: #333;
   margin: 0;
 }
 #nice .code-snippet__fix .code-snippet__line-index li::before {
@@ -353,7 +350,7 @@ export default `/*默认样式，最佳实践*/
   background: none;
   font-size: 80%;
   opacity: 0.6;
-  line-height: 26px;
+  line-height: 30px;
   font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -363,8 +360,8 @@ export default `/*默认样式，最佳实践*/
   width: 90%;
   padding: 0px;
   margin: 0;
-  line-height: 26px;
-  color: black;
+  line-height: 30px;
+  color: #333;
   word-break:break-all;
   width: calc(100%-50)
 }
