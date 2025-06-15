@@ -76,8 +76,7 @@ export default `/*默认样式，最佳实践*/
 /*列表*/
 #nice ul,
 #nice ol {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
   padding-left: 25px;
   color: #333;
 }
