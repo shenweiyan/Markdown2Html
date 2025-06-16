@@ -15,6 +15,17 @@ export default `/*默认样式，最佳实践*/
   /*margin-top: -10px;*/ /*解决开头空隙过大问题*/
 }
 
+@media (min-width: 576px) and (min-width: 768px) {
+  #nice { line-height: 1.68 }
+  #nice p { line-height: 26px }
+  #nice li section { line-height: 26px }
+  #nice blockquote p { line-height: 26px }
+  #nice pre code span { line-height: 26px }
+  #nice .code-snippet__fix .code-snippet__line-index li { line-height: 26px }
+  #nice .footnote-num { line-height: 26px }
+  #nice .footnote-item p { line-height: 26px }
+}
+
 /*段落*/
 #nice p {
   font-size: 16px;
@@ -117,9 +128,9 @@ export default `/*默认样式，最佳实践*/
 }
 
 #nice blockquote p {
-  margin: 6px 0; /*=12px/2*/
+  margin: 8px 0; /*上下间距保持居中，上下间距实际会比只有底部间距看上去小，所以增大一点*/
   color: #333;
-  line-height: 30px;
+  line-height: 28px; /*28也是舒适的PC端阅读行距*/
 }
 
 #nice .table-of-contents a {
