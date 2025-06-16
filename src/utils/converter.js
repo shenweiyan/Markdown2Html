@@ -9,6 +9,7 @@ import {
   FONT_THEME_ID,
   MJX_DATA_FORMULA,
 } from "./constant";
+import mediaStyle from "../template/basic_media";
 
 export const solveWeChatMath = () => {
   const layout = document.getElementById(LAYOUT_ID);
@@ -111,6 +112,7 @@ export const solveHtml = () => {
       inlinePseudoElements: true,
       preserveImportant: true,
     });
+	res += `<style>${mediaStyle}</style>`;
   } catch (e) {
     message.error("请检查 CSS 文件是否编写正确！");
   }
