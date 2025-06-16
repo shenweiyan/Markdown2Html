@@ -1,11 +1,11 @@
 export default `/*默认样式，最佳实践*/
+/* 一些样式写在basic_media.js */
 
 /*全局属性*/
 #nice {
   font-size: 16px;
   color: black;
-  padding: 0 10px;
-  line-height: 1.875; /*=30/16*/
+  padding: 0 3px;
   word-spacing: 0px;
   letter-spacing: 0px;
   word-break: break-word;
@@ -19,7 +19,6 @@ export default `/*默认样式，最佳实践*/
 #nice p {
   font-size: 16px;
   margin-bottom: 12px;
-  line-height: 30px; /*手机端26px更合适*/
   color: #333;
 }
 
@@ -93,7 +92,6 @@ export default `/*默认样式，最佳实践*/
 
 #nice li section {
   margin-bottom: 12px;
-  line-height: 30px;
   text-align: left;
   color: rgb(1,1,1); /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
   font-weight: 500;
@@ -184,7 +182,6 @@ export default `/*默认样式，最佳实践*/
   -webkit-overflow-scrolling: touch;
 }
 #nice pre code span {
-  line-height: 30px;
 }
 
 /*行内代码*/
@@ -298,7 +295,6 @@ export default `/*默认样式，最佳实践*/
 #nice .code-snippet__fix .code-snippet__line-index li {
   list-style-type: none;
   text-align: right;
-  line-height: 30px;
   color: #333;
   margin: 0;
 }
@@ -350,7 +346,6 @@ export default `/*默认样式，最佳实践*/
   background: none;
   font-size: 80%;
   opacity: 0.6;
-  line-height: 30px;
   font-family: ptima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -360,7 +355,6 @@ export default `/*默认样式，最佳实践*/
   width: 90%;
   padding: 0px;
   margin: 0;
-  line-height: 30px;
   color: #333;
   word-break:break-all;
   width: calc(100%-50)
