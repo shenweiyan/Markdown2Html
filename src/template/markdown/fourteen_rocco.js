@@ -6,10 +6,9 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
  * 英文换行 word-break: break-all;
  */
 #nice {
+  font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Arial, Microsoft YaHei, Segoe UI, Hiragino Sans GB, Helvetica Neue, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --text-size: 16px;
   font-size: var(--text-size);
-  padding: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Arial, Microsoft YaHei, Segoe UI, Hiragino Sans GB, Helvetica Neue, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --text-color: #333; /* #151515 #262626 #505050*/
   color: var(--text-color);
   --title-color: #333;
@@ -95,8 +94,8 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
 /* 二级标题内容 */
 #nice h2 .content {
   display: block;
-  -webkit-box-reflect: below 0em -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(255,255,255,0.1)));
   color: var(--title-color);
+  /* -webkit-box-reflect: below 0em -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(255,255,255,0.1))); */
 }
 
 #nice h2 strong {
