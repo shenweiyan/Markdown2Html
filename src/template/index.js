@@ -34,14 +34,10 @@ import macMonokai from "./macCode/macMonokai";
 import macVs2015 from "./macCode/macVs2015";
 import macXcode from "./macCode/macXcode";
 
-import basicMobile from "./basic-mobile";
-import basicDesktop from "./basic-desktop";
+import basic from "./basic";
 
 export default {
-  basic: {
-    mobile: basicMobile,
-    desktop: basicDesktop
-  },
+  basic,
   theme: {
     normal,
     one,
