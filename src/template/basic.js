@@ -19,10 +19,10 @@ export default `/*默认样式，最佳实践*/
 #nice p {
   font-size: 16px;
   margin-bottom: 12px;
-  line-height: 30px;
+  line-height: 30px; /*手机端26px更合适*/
   color: #333;
 }
-df
+
 /*标题*/
 #nice h1,
 #nice h2,
