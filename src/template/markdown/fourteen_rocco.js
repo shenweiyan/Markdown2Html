@@ -7,6 +7,7 @@ export default `/* 自定义样式，实时生效，浏览器实时缓存 */
  */
 #nice {
   font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Arial, Microsoft YaHei, Segoe UI, Hiragino Sans GB, Helvetica Neue, Helvetica, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  padding: 0px;
   --text-size: 16px;
   font-size: var(--text-size);
   --text-color: #333; /* #151515 #262626 #505050*/
