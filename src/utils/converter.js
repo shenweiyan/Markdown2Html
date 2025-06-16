@@ -9,7 +9,7 @@ import {
   FONT_THEME_ID,
   MJX_DATA_FORMULA,
 } from "./constant";
-import mediaStyle from "../template/basic_media";
+import TEMPLATE from "../template/index";
 
 export const solveWeChatMath = () => {
   const layout = document.getElementById(LAYOUT_ID);
@@ -102,7 +102,10 @@ export const solveHtml = () => {
   html = html.replace(/mjx-container/g, "section");
   html = html.replace(/class="mjx-solid"/g, 'fill="none" stroke-width="70"');
   html = html.replace(/<mjx-assistive-mml.+?<\/mjx-assistive-mml>/g, "");
-  const basicStyle = document.getElementById(BASIC_THEME_ID).innerText;
+
+  const isMobile = window.innerWidth < 768;
+  const basicStyle = isMobile ? TEMPLATE.basic.mobile : TEMPLATE.basic.desktop;
+
   const markdownStyle = document.getElementById(MARKDOWN_THEME_ID).innerText;
   const codeStyle = document.getElementById(CODE_THEME_ID).innerText;
   const fontStyle = document.getElementById(FONT_THEME_ID).innerText;
@@ -112,7 +115,6 @@ export const solveHtml = () => {
       inlinePseudoElements: true,
       preserveImportant: true,
     });
-	res += `<style>${mediaStyle}</style>`;
   } catch (e) {
     message.error("请检查 CSS 文件是否编写正确！");
   }
