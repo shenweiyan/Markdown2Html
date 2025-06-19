@@ -230,7 +230,7 @@ export default `/*默认样式，最佳实践*/
 #nice table {
   display: table;
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 #nice tbody {
   border: 0;
