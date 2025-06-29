@@ -33,6 +33,7 @@
     "axios": "^0.18.0",
     "diff-match-patch": "^1.0.4",
     "highlight.js": "^9.15.6",
+    "html2canvas": "^1.4.1",
     "juice": "^5.2.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",

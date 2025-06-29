@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import "codemirror/addon/search/searchcursor";
 import "codemirror/keymap/sublime";
 import "antd/dist/antd.css";
-import {observer, inject} from "mobx-react";
+import { observer, inject } from "mobx-react";
 import classnames from "classnames";
 import throttle from "lodash.throttle";
 
@@ -25,13 +25,17 @@ import {
   IMAGE_HOSTING_NAMES,
   IMAGE_HOSTING_TYPE,
   MJX_DATA_FORMULA,
-  MJX_DATA_FORMULA_TYPE,
+  MJX_DATA_FORMULA_TYPE
 } from "./utils/constant";
-import {markdownParser, markdownParserWechat, updateMathjax} from "./utils/helper";
+import {
+  markdownParser,
+  markdownParserWechat,
+  updateMathjax
+} from "./utils/helper";
 import pluginCenter from "./utils/pluginCenter";
 import appContext from "./utils/appContext";
-import {uploadAdaptor} from "./utils/imageHosting";
-import bindHotkeys, {betterTab, rightClick} from "./utils/hotkey";
+import { uploadAdaptor } from "./utils/imageHosting";
+import bindHotkeys, { betterTab, rightClick } from "./utils/hotkey";
 
 @inject("content")
 @inject("navbar")
@@ -46,7 +50,7 @@ class App extends Component {
     this.scale = 1;
     this.handleUpdateMathjax = throttle(updateMathjax, 1500);
     this.state = {
-      focus: false,
+      focus: false
     };
   }
 
@@ -60,25 +64,25 @@ class App extends Component {
         tex: {
           inlineMath: [["$", "$"]],
           displayMath: [["$$", "$$"]],
-          tags: "ams",
+          tags: "ams"
         },
         svg: {
-          fontCache: "none",
+          fontCache: "none"
         },
         options: {
           renderActions: {
             addMenu: [0, "", ""],
             addContainer: [
               190,
-              (doc) => {
+              doc => {
                 for (const math of doc.math) {
                   this.addContainer(math, doc);
                 }
               },
-              this.addContainer,
-            ],
-          },
-        },
+              this.addContainer
+            ]
+          }
+        }
       };
       // eslint-disable-next-line
       require("mathjax/es5/tex-svg-full");
@@ -98,7 +102,10 @@ class App extends Component {
 
   componentWillUnmount() {
     document.removeEventListener("fullscreenchange", this.solveScreenChange);
-    document.removeEventListener("webkitfullscreenchange", this.solveScreenChange);
+    document.removeEventListener(
+      "webkitfullscreenchange",
+      this.solveScreenChange
+    );
     document.removeEventListener("mozfullscreenchange", this.solveScreenChange);
     document.removeEventListener("MSFullscreenChange", this.solveScreenChange);
   }
@@ -107,7 +114,15 @@ class App extends Component {
     if (this.props.useImageHosting === undefined) {
       return;
     }
-    const {url, name, isSmmsOpen, isQiniuyunOpen, isAliyunOpen, isGiteeOpen, isGitHubOpen} = this.props.useImageHosting;
+    const {
+      url,
+      name,
+      isSmmsOpen,
+      isQiniuyunOpen,
+      isAliyunOpen,
+      isGiteeOpen,
+      isGitHubOpen
+    } = this.props.useImageHosting;
     if (name) {
       this.props.imageHosting.setHostingUrl(url);
       this.props.imageHosting.setHostingName(name);
@@ -149,7 +164,7 @@ class App extends Component {
   };
 
   setEditorContent = () => {
-    const {defaultText} = this.props;
+    const { defaultText } = this.props;
     if (defaultText) {
       this.props.content.setContent(defaultText);
     }
@@ -160,20 +175,23 @@ class App extends Component {
   }
 
   solveScreenChange = () => {
-    const {isImmersiveEditing} = this.props.view;
+    const { isImmersiveEditing } = this.props.view;
     this.props.view.setImmersiveEditing(!isImmersiveEditing);
   };
 
-  getInstance = (instance) => {
+  getInstance = instance => {
     instance.editor.on("inputRead", function(cm, event) {
       if (event.origin === "paste") {
         var text = event.text[0]; // pasted string
         var new_text = ""; // any operations here
         cm.refresh();
-        const {length} = cm.getSelections();
+        const { length } = cm.getSelections();
         // my first idea was
         // note: for multiline strings may need more complex calculations
-        cm.replaceRange(new_text, event.from, {line: event.from.line, ch: event.from.ch + text.length});
+        cm.replaceRange(new_text, event.from, {
+          line: event.from.line,
+          ch: event.from.ch + text.length
+        });
         // first solution did'nt work (before i guess to call refresh) so i tried that way, works too
         if (length === 1) {
           cm.execCommand("undo");
@@ -189,11 +207,15 @@ class App extends Component {
 
   handleScroll = () => {
     if (this.props.navbar.isSyncScroll) {
-      const {markdownEditor} = this.props.content;
+      const { markdownEditor } = this.props.content;
       const cmData = markdownEditor.getScrollInfo();
       const editorToTop = cmData.top;
       const editorScrollHeight = cmData.height - cmData.clientHeight;
-      this.scale = (this.previewWrap.offsetHeight - this.previewContainer.offsetHeight + 55) / editorScrollHeight;
+      this.scale =
+        (this.previewWrap.offsetHeight -
+          this.previewContainer.offsetHeight +
+          55) /
+        editorScrollHeight;
       if (this.index === 1) {
         this.previewContainer.scrollTop = editorToTop * this.scale;
       } else {
@@ -203,7 +225,7 @@ class App extends Component {
     }
   };
 
-  handleChange = (editor) => {
+  handleChange = editor => {
     if (this.state.focus) {
       const content = editor.getValue();
       this.props.content.setContent(content);
@@ -211,21 +233,21 @@ class App extends Component {
     }
   };
 
-  handleFocus = (editor) => {
+  handleFocus = editor => {
     this.setState({
-      focus: true,
+      focus: true
     });
     this.props.onTextFocus && this.props.onTextFocus(editor.getValue());
   };
 
-  handleBlur = (editor) => {
+  handleBlur = editor => {
     this.setState({
-      focus: false,
+      focus: false
     });
     this.props.onTextBlur && this.props.onTextBlur(editor.getValue());
   };
 
-  getStyleInstance = (instance) => {
+  getStyleInstance = instance => {
     if (instance) {
       this.styleEditor = instance.editor;
       this.styleEditor.on("keyup", (cm, e) => {
@@ -244,7 +266,10 @@ class App extends Component {
     }
     for (let i = 0; i < e.dataTransfer.files.length; i++) {
       // console.log(e.dataTransfer.files[i]);
-      uploadAdaptor({file: e.dataTransfer.files[i], content: this.props.content});
+      uploadAdaptor({
+        file: e.dataTransfer.files[i],
+        content: this.props.content
+      });
     }
   };
 
@@ -252,21 +277,24 @@ class App extends Component {
     const cbData = e.clipboardData;
 
     const insertPasteContent = (cm, content) => {
-      const {length} = cm.getSelections();
+      const { length } = cm.getSelections();
       cm.replaceSelections(Array(length).fill(content));
       this.setState(
         {
-          focus: true,
+          focus: true
         },
         () => {
           this.handleChange(cm);
-        },
+        }
       );
     };
 
     if (e.clipboardData && e.clipboardData.files) {
       for (let i = 0; i < e.clipboardData.files.length; i++) {
-        uploadAdaptor({file: e.clipboardData.files[i], content: this.props.content});
+        uploadAdaptor({
+          file: e.clipboardData.files[i],
+          content: this.props.content
+        });
       }
     }
 
@@ -289,18 +317,29 @@ class App extends Component {
 
   addContainer(math, doc) {
     const tag = "span";
-    const spanClass = math.display ? "span-block-equation" : "span-inline-equation";
+    const spanClass = math.display
+      ? "span-block-equation"
+      : "span-inline-equation";
     const cls = math.display ? "block-equation" : "inline-equation";
     math.typesetRoot.className = cls;
     math.typesetRoot.setAttribute(MJX_DATA_FORMULA, math.math);
     math.typesetRoot.setAttribute(MJX_DATA_FORMULA_TYPE, cls);
-    math.typesetRoot = doc.adaptor.node(tag, {class: spanClass, style: "cursor:pointer"}, [math.typesetRoot]);
+    math.typesetRoot = doc.adaptor.node(
+      tag,
+      { class: spanClass, style: "cursor:pointer" },
+      [math.typesetRoot]
+    );
   }
 
   render() {
-    const {codeNum, previewType} = this.props.navbar;
-    const {isEditAreaOpen, isPreviewAreaOpen, isStyleEditorOpen, isImmersiveEditing} = this.props.view;
-    const {isSearchOpen} = this.props.dialog;
+    const { codeNum, previewType } = this.props.navbar;
+    const {
+      isEditAreaOpen,
+      isPreviewAreaOpen,
+      isStyleEditorOpen,
+      isImmersiveEditing
+    } = this.props.view;
+    const { isSearchOpen } = this.props.dialog;
 
     const parseHtml =
       codeNum === 0
@@ -310,38 +349,48 @@ class App extends Component {
     const mdEditingClass = classnames({
       "nice-md-editing": !isImmersiveEditing,
       "nice-md-editing-immersive": isImmersiveEditing,
-      "nice-md-editing-hide": !isEditAreaOpen,
+      "nice-md-editing-hide": !isEditAreaOpen
     });
 
     const styleEditingClass = classnames({
       "nice-style-editing": true,
-      "nice-style-editing-hide": isImmersiveEditing,
+      "nice-style-editing-hide": isImmersiveEditing
     });
 
     const richTextClass = classnames({
       "nice-marked-text": true,
       "nice-marked-text-pc": previewType === "pc",
-      "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen,
+      "nice-marked-text-hide": isImmersiveEditing || !isPreviewAreaOpen
     });
 
     const richTextBoxClass = classnames({
       "nice-wx-box": true,
-      "nice-wx-box-pc": previewType === "pc",
+      "nice-wx-box-pc": previewType === "pc"
     });
 
     const textContainerClass = classnames({
       "nice-text-container": !isImmersiveEditing,
-      "nice-text-container-immersive": isImmersiveEditing,
+      "nice-text-container-immersive": isImmersiveEditing
     });
 
     return (
       <appContext.Consumer>
-        {({defaultTitle, onStyleChange, onStyleBlur, onStyleFocus, token}) => (
-          <div className="nice-app">
+        {({
+          defaultTitle,
+          onStyleChange,
+          onStyleBlur,
+          onStyleFocus,
+          token
+        }) => (
+          <div className="nice-app" style={{ overflow: "hidden" }}>
             <Navbar title={defaultTitle} token={token} />
             <Toobar token={token} />
             <div className={textContainerClass}>
-              <div id="nice-md-editor" className={mdEditingClass} onMouseOver={(e) => this.setCurrentIndex(1, e)}>
+              <div
+                id="nice-md-editor"
+                className={mdEditingClass}
+                onMouseOver={e => this.setCurrentIndex(1, e)}
+              >
                 {isSearchOpen && <SearchBox />}
                 <CodeMirror
                   value={this.props.content.content}
@@ -354,8 +403,8 @@ class App extends Component {
                     extraKeys: {
                       ...bindHotkeys(this.props.content, this.props.dialog),
                       Tab: betterTab,
-                      RightClick: rightClick,
-                    },
+                      RightClick: rightClick
+                    }
                   }}
                   onChange={this.handleChange}
                   onScroll={this.handleScroll}
@@ -366,13 +415,17 @@ class App extends Component {
                   ref={this.getInstance}
                 />
               </div>
-              <div id="nice-rich-text" className={richTextClass} onMouseOver={(e) => this.setCurrentIndex(2, e)}>
+              <div
+                id="nice-rich-text"
+                className={richTextClass}
+                onMouseOver={e => this.setCurrentIndex(2, e)}
+              >
                 <Sidebar />
                 <div
                   id={BOX_ID}
                   className={richTextBoxClass}
                   onScroll={this.handleScroll}
-                  ref={(node) => {
+                  ref={node => {
                     this.previewContainer = node;
                   }}
                 >
@@ -381,9 +434,9 @@ class App extends Component {
                     data-tool="markdown2wechat编辑器"
                     data-website="https://aizhuanqian.com"
                     dangerouslySetInnerHTML={{
-                      __html: parseHtml,
+                      __html: parseHtml
                     }}
-                    ref={(node) => {
+                    ref={node => {
                       this.previewWrap = node;
                     }}
                   />
@@ -392,7 +445,11 @@ class App extends Component {
 
               {isStyleEditorOpen && (
                 <div id="nice-style-editor" className={styleEditingClass}>
-                  <StyleEditor onStyleChange={onStyleChange} onStyleBlur={onStyleBlur} onStyleFocus={onStyleFocus} />
+                  <StyleEditor
+                    onStyleChange={onStyleChange}
+                    onStyleBlur={onStyleBlur}
+                    onStyleFocus={onStyleFocus}
+                  />
                 </div>
               )}
 

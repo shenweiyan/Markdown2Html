@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import {Menu, Dropdown, message} from "antd";
-import {observer, inject} from "mobx-react";
-import {wordCalc} from "../utils/helper";
+import React, { Component } from "react";
+import { Menu, Dropdown, message } from "antd";
+import { observer, inject } from "mobx-react";
+import { wordCalc } from "../utils/helper";
 import SitDownConverter from "../utils/sitdownConverter";
-import {SITDOWN_OPTIONS} from "../utils/constant";
+import { SITDOWN_OPTIONS } from "../utils/constant";
 import SvgIcon from "../icon";
 
 import "./Footer.css";
@@ -16,12 +16,12 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      engineDesc: SITDOWN_OPTIONS[0].desc,
+      engineDesc: SITDOWN_OPTIONS[0].desc
     };
   }
 
   handleMessage = () => {
-    const {pasteHtml, pasteText} = this.props.footer;
+    const { pasteHtml, pasteText } = this.props.footer;
     let toMarkdown = SitDownConverter.GFM;
     switch (this.state.platform) {
       case "csdn":
@@ -41,7 +41,7 @@ class Footer extends Component {
         break;
     }
     const markdown = toMarkdown(pasteHtml);
-    const {content} = this.props.content;
+    const { content } = this.props.content;
     const convertContent = content.replace(pasteText, markdown);
     this.props.content.setContent(convertContent);
 
@@ -51,12 +51,12 @@ class Footer extends Component {
     message.success("转换成功！");
   };
 
-  handleMenu = ({key, domEvent}) => {
+  handleMenu = ({ key, domEvent }) => {
     if (key === "thanks") {
       const w = window.open("about:blank");
       w.location.href = "https://github.com/mdnice/sitdown";
     } else {
-      this.setState({engineDesc: key});
+      this.setState({ engineDesc: key });
     }
     domEvent.stopPropagation();
   };
@@ -64,7 +64,7 @@ class Footer extends Component {
   render() {
     const menu = (
       <Menu onClick={this.handleMenu}>
-        {SITDOWN_OPTIONS.map((option) => (
+        {SITDOWN_OPTIONS.map(option => (
           <Menu.Item key={option.desc}>
             <div>{option.value}</div>
           </Menu.Item>
@@ -76,15 +76,15 @@ class Footer extends Component {
       </Menu>
     );
 
-    const {content, themeList} = this.props.content;
-    const {templateNum} = this.props.navbar;
-    const {isPasteHtmlChecked} = this.props.footer;
+    const { content, themeList } = this.props.content;
+    const { templateNum } = this.props.navbar;
+    const { isPasteHtmlChecked } = this.props.footer;
 
     const lineCount = content.split("\n").length;
     const wordCount = wordCalc(content);
     const themeName = themeList[templateNum] && themeList[templateNum].name;
     return (
-      <div className="nice-footer-container">
+      <div className="nice-footer-container" style={{ zIndex: 1000 }}>
         <p>
           行数：
           {lineCount}
@@ -100,12 +100,17 @@ class Footer extends Component {
         {isPasteHtmlChecked && (
           <div className="nice-footer-message" onClick={this.handleMessage}>
             点击使用
-            <Dropdown overlay={menu} trigger={["click"]} overlayClassName="nice-footer-overlay" placement="topLeft">
+            <Dropdown
+              overlay={menu}
+              trigger={["click"]}
+              overlayClassName="nice-footer-overlay"
+              placement="topLeft"
+            >
               <a
                 id="nice-footer-engine"
                 className="nice-footer-engine"
                 href="#"
-                onClick={(e) => {
+                onClick={e => {
                   e.stopPropagation();
                 }}
               >
@@ -124,8 +129,8 @@ class Footer extends Component {
 const style = {
   svgIcon: {
     width: "12px",
-    height: "12px",
-  },
+    height: "12px"
+  }
 };
 
 export default Footer;
