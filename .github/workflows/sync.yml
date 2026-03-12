@@ -22,20 +22,6 @@ jobs:
           GITHUB_REPOSITORY: shenweiyan/Markdown2Html
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      - name: Push to Gitee
-        run: |
-          #echo "stop!"
-          remote_repo="https://shenweiyan:${GITEE_PASSWORD}@gitee.com/${GITEE_REPOSITORY}.git"
-          git remote add gitee "${remote_repo}"
-          git show-ref # useful for debugging
-          git branch --verbose
-          # publish all
-          git push --all --force gitee
-          git push --tags --force gitee
-        env:
-          GITEE_REPOSITORY: shenweiyan/Markdown2Html
-          GITEE_PASSWORD: ${{ secrets.GITEE_PASSWORD }}
-
       - name: Push to Gitcode
         run: |
           remote_repo="https://shenweiyan:${GITCODE_PASSWORD}@gitcode.com/${GITCODE_REPOSITORY}.git"

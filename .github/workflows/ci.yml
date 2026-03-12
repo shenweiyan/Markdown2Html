@@ -1,0 +1,32 @@
+name: build and deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
+      GENERATE_SOURCEMAP: 'false'
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+
+      - name: Build with Docker Image
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/app -w /app shenweiyan/markdown2html:v1 -c "ln -s /md2html/node_modules /app && yarn run build"
+
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: shenweiyan/Markdown2Html
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}     
+          publish_dir: ./build
+          publish_branch: gh-pages
+          force_orphan: true
+          full_commit_message: ${{ github.event.head_commit.message }}
+          cname: 'md.weiyan.cc'
