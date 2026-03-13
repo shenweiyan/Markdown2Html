@@ -337,7 +337,8 @@ class App extends Component {
       isEditAreaOpen,
       isPreviewAreaOpen,
       isStyleEditorOpen,
-      isImmersiveEditing
+      isImmersiveEditing,
+      isFootnotesVisible
     } = this.props.view;
     const { isSearchOpen } = this.props.dialog;
 
@@ -365,7 +366,8 @@ class App extends Component {
 
     const richTextBoxClass = classnames({
       "nice-wx-box": true,
-      "nice-wx-box-pc": previewType === "pc"
+      "nice-wx-box-pc": previewType === "pc",
+      "nice-wx-box-hide-footnotes": !isFootnotesVisible
     });
 
     const textContainerClass = classnames({

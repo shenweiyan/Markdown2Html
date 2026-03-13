@@ -78,6 +78,12 @@
   box-shadow: none;
 }
 
+/* 隐藏参考资料 */
+.nice-wx-box-hide-footnotes .footnotes-sep,
+.nice-wx-box-hide-footnotes .footnotes {
+  display: none;
+}
+
 .nice-style-editing-hide {
   display: none;
 }
