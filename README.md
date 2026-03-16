@@ -1,4 +1,4 @@
-<div align="center"><img width="500" src="./screenshot.png"/></div>
+<div align="center"><img width="500" src="./screenshot.webp"/></div>
 <h1 align="center">Markdown2Html</h1>
 
 ## 简介
