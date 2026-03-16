@@ -1,14 +1,14 @@
 {
-  "short_name": "Markdown Nice",
-  "name": "Markdown Nice",
+  "short_name": "Markdown2Html",
+  "name": "Markdown2Html",
   "icons": [
     {
-      "src": "https://my-wechat.mdnice.com/mdnice/mdnice%20logo_20191007150129.png",
+      "src": "https://gi.weiyan.tech/0000/md2html/logo.webp",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "https://my-wechat.mdnice.com/mdnice/mdnice%20logo_20191007150129.png",
+      "src": "https://gi.weiyan.tech/0000/md2html/logo.webp",
       "sizes": "512x512",
       "type": "image/png"
     }

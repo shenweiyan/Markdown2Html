@@ -1,4 +1,16 @@
-请使用 **Chrome** 浏览器。
+> 微信公众号：**[BioIT爱好者](#jump_10)**
+
+📢 Markdown2Html 是一个 Markdown 转 Html，支持掘金、知乎、微信公众号的 Markdown 编辑器，专注于微信公众号 Markdown 的排版。问题或建议，请关注 **[BioIT爱好者](#jump_10)** 公众号，或者通过以下方式与我联系：
+
+> - 邮箱：[shenweiyan@aliyun.com](mailto:shenweiyan@aliyun.com?subject=Markdown2Html反馈与意见)
+> - 微信：ishenweiyan（添加微信好友，请注明真实姓名）
+
+**在线访问**
+
+有时网站的访问不稳定，可分别尝试不同的服务器：
+
+- [https://md.weiyan.cc](https://mdx.weiyan.cc)
+- [https://md2html.shenwy.com](https://md2html.shenwy.com)
 
 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
 
@@ -6,13 +18,15 @@
 
 - 支持自定义样式的 Markdown 编辑器
 - 支持微信公众号、知乎和稀土掘金
-- 支持以 PDF 和 Markdown 格式的文件导出
+- 支持 LaTeX 公式
+- 支持 Html 转 Markdwon
+- 支持导出 PDF 和 Markdown
 
-![](https://my-wechat.mdnice.com/wechat.jpg)
+![Markdown 示例图片](https://gi.weiyan.tech/0000/md2html/markdown.png)
 
 ## 2 主题
 
-**https://preview.mdnice.com/themes/**
+[Markdown2Html 主题列表](https://github.com/shenweiyan/Markdown2Html/tree/main/src/template/markdown)
 
 欢迎提交主题，提供更多文章示例~~
 
@@ -89,7 +103,7 @@ _这个是斜体_
 > 
 > 读一本好书，就是在和高尚的人谈话。 **——歌德**
 > 
-> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+> [Markdown2Html](https://github.com/shenweiyan/Markdown2Html)
 > 
 > ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
 
@@ -101,7 +115,7 @@ _这个是斜体_
 >>
 >> 读一本好书，就是在和高尚的人谈话。 **——歌德**
 >>
->> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+>> [Markdown2Html](https://github.com/shenweiyan/Markdown2Html)
 >> 
 >> ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
 
@@ -111,7 +125,7 @@ _这个是斜体_
 >>>
 >>> 读一本好书，就是在和高尚的人谈话。 **——歌德**
 >>>
->>> [Markdown Nice最全功能介绍](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+>>> [Markdown2Html](https://github.com/shenweiyan/Markdown2Html)
 >>> 
 >>> ![这里写图片描述](https://shub.weiyan.tech/md2html/markdown.png)
 
@@ -181,7 +195,7 @@ _这个是斜体_
 
 图片还可以和链接嵌套使用，能够实现推荐卡片的效果，用法如下：
 
-[![Markdown Nice 最全功能介绍](https://shub.weiyan.tech/md2html/dance.gif)](https://mp.weixin.qq.com/s/lM808MxUu6tp8zU8SBu3sg)
+[![欢迎使用 Markdown2html](https://gi.weiyan.tech/0000/img/kg-readme-cover.gif)](https://github.com/shenweiyan/Markdown2Html)
 
 ## 4. 特殊语法
 
@@ -328,6 +342,6 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 不支持，推荐使用开源工具`https://draw.io/`制作后再导入图片
 
-### 5.3 更多文档
+### 5.3 更多
 
-更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")
+更多信息请参考 [markdown2html-github](https://github.com/shenweiyan/Markdown2Html "更多信息")
