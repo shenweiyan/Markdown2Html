@@ -22,7 +22,7 @@
 - 支持 Html 转 Markdwon
 - 支持导出 PDF 和 Markdown
 
-![Markdown 示例图片](https://gi.weiyan.tech/0000/md2html/markdown.png)
+![Markdown 示例图片](https://shub.weiyan.tech/md2html/markdown.png)
 
 ## 2 主题
 

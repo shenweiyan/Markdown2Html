@@ -11,6 +11,8 @@ class View {
 
   @observable isFootnotesVisible = true;
 
+  @observable isFigcaptionVisible = true;
+
   @action
   setEditAreaOpen = (isEditAreaOpen) => {
     this.isEditAreaOpen = isEditAreaOpen;
@@ -34,6 +36,11 @@ class View {
   @action
   setFootnotesVisible = (isFootnotesVisible) => {
     this.isFootnotesVisible = isFootnotesVisible;
+  };
+
+  @action
+  setFigcaptionVisible = (isFigcaptionVisible) => {
+    this.isFigcaptionVisible = isFigcaptionVisible;
   };
 }
 

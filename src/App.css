@@ -84,6 +84,11 @@
   display: none;
 }
 
+/* 隐藏图像标题 */
+.nice-wx-box-hide-figcaption #nice figcaption {
+  display: none;
+}
+
 .nice-style-editing-hide {
   display: none;
 }

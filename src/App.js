@@ -338,7 +338,8 @@ class App extends Component {
       isPreviewAreaOpen,
       isStyleEditorOpen,
       isImmersiveEditing,
-      isFootnotesVisible
+      isFootnotesVisible,
+      isFigcaptionVisible
     } = this.props.view;
     const { isSearchOpen } = this.props.dialog;
 
@@ -367,7 +368,8 @@ class App extends Component {
     const richTextBoxClass = classnames({
       "nice-wx-box": true,
       "nice-wx-box-pc": previewType === "pc",
-      "nice-wx-box-hide-footnotes": !isFootnotesVisible
+      "nice-wx-box-hide-footnotes": !isFootnotesVisible,
+      "nice-wx-box-hide-figcaption": !isFigcaptionVisible
     });
 
     const textContainerClass = classnames({
@@ -403,7 +405,7 @@ class App extends Component {
                     lineWrapping: true,
                     lineNumbers: false,
                     extraKeys: {
-                      ...bindHotkeys(this.props.content, this.props.dialog),
+                      ...bindHotkeys(this.props.content, this.props.dialog, this.props.view),
                       Tab: betterTab,
                       RightClick: rightClick
                     }

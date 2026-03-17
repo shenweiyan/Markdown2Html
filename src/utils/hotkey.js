@@ -37,7 +37,7 @@ const handlePressHotkey = (type, content) => {
   content.setContent(editorContent);
 };
 
-const bindHotkeys = (content, dialog) =>
+const bindHotkeys = (content, dialog, view) =>
   isPlatformWindows
     ? {
         "Ctrl-B": () => {
@@ -84,6 +84,9 @@ const bindHotkeys = (content, dialog) =>
         },
         "Ctrl-F": () => {
           dialog.setSearchOpen(!dialog.isSearchOpen);
+        },
+        "Ctrl-Alt-D": () => {
+          view && view.setFigcaptionVisible(!view.isFigcaptionVisible);
         },
       }
     : {
@@ -132,6 +135,9 @@ const bindHotkeys = (content, dialog) =>
         "Cmd-F": () => {
           dialog.setSearchOpen(!dialog.isSearchOpen);
         },
+        "Cmd-Alt-D": () => {
+          view && view.setFigcaptionVisible(!view.isFigcaptionVisible);
+        },
       };
 
 export const hotKeys = isPlatformWindows
@@ -147,6 +153,7 @@ export const hotKeys = isPlatformWindows
       format: "Ctrl+Alt+F",
       linkToFoot: "Ctrl+Alt+L",
       search: "Ctrl+F",
+      showDiagram: "Ctrl+Alt+D",
     }
   : {
       bold: "⌘B",
@@ -160,6 +167,7 @@ export const hotKeys = isPlatformWindows
       format: "⌥⌘F",
       linkToFoot: "⌥⌘L",
       search: "⌘F",
+      showDiagram: "⌥⌘D",
     };
 
 export const betterTab = (cm) => {

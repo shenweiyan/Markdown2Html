@@ -12,6 +12,7 @@ import Format from "./Pattern/Format";
 import LinkToFoot from "./Pattern/LinkToFoot";
 import Font from "./Pattern/Font";
 import InlineCode from "./Pattern/InlineCode";
+import ShowDiagram from "./Pattern/ShowDiagram";
 import Footnotes from "./View/Footnotes";
 
 import "./common.css";
@@ -56,6 +57,9 @@ const menu = (
     </Menu.Item>
     <Menu.Item>
       <Footnotes />
+    </Menu.Item>
+    <Menu.Item>
+      <ShowDiagram />
     </Menu.Item>
     <Menu.Item>
       <Format />
