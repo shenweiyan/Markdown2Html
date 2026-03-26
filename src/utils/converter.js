@@ -81,7 +81,7 @@ export const solveJuejinCode = (html) => {
   if (brMatchList) {
     for (const item of brMatchList) {
       const content = item
-        .replace(/display: -webkit-box;/g, "display: block;") // -webkit-box替换为block
+        .replace(/display: -webkit-box;/g, "display: block;") // -webkit-box 替换为 block
         .replace(/<br>/g, "\n<span/>") // <br>替换为\n<span/>
         .replace(/&nbsp;/g, " "); // 空格转回，不转回遇到 "$ " 情况会出现问题
 
@@ -101,14 +101,20 @@ export const addJuejinSuffix = () => {
   element.appendChild(suffix);
 };
 
-export const solveHtml = () => {
+export const solveHtml = (isFigcaptionVisible = true) => {
   const element = document.getElementById(BOX_ID);
 
   const inner = element.children[0].children;
   for (const item of inner) {
-    item.setAttribute("data-tool", "mdnice编辑器");
+    item.setAttribute("data-tool", "mdnice 编辑器");
   }
   let html = element.innerHTML;
+  
+  // 当不显示图解时，移除 figcaption 元素
+  if (!isFigcaptionVisible) {
+    html = html.replace(/<figcaption[^>]*>.*?<\/figcaption>/g, "");
+  }
+  
   html = html.replace(/<mjx-container (class="inline.+?)<\/mjx-container>/g, "<span $1</span>");
   html = html.replace(/\s<span class="inline/g, '&nbsp;<span class="inline');
   html = html.replace(/svg><\/span>\s/g, "svg></span>&nbsp;");

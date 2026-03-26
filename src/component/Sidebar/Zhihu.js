@@ -11,6 +11,7 @@ import "./Zhihu.css";
 @inject("navbar")
 @inject("imageHosting")
 @inject("dialog")
+@inject("view")
 @observer
 class Zhihu extends Component {
   constructor(props) {
@@ -26,7 +27,8 @@ class Zhihu extends Component {
     const layout = document.getElementById(LAYOUT_ID); // 保护现场
     const html = layout.innerHTML;
     solveZhihuMath();
-    this.html = solveHtml();
+    const {isFigcaptionVisible} = this.props.view;
+    this.html = solveHtml(isFigcaptionVisible);
     copySafari(this.html);
     message.success("已复制，请到知乎粘贴");
     layout.innerHTML = html; // 恢复现场

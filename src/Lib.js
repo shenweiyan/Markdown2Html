@@ -26,7 +26,8 @@ class Lib extends Component {
     const layout = document.getElementById(LAYOUT_ID); // 保护现场
     const html = layout.innerHTML;
     solveWeChatMath();
-    const res = solveHtml();
+    const {isFigcaptionVisible} = view;
+    const res = solveHtml(isFigcaptionVisible);
     layout.innerHTML = html; // 恢复现场
     return res;
   }
@@ -35,7 +36,8 @@ class Lib extends Component {
     const layout = document.getElementById(LAYOUT_ID); // 保护现场
     const html = layout.innerHTML;
     solveZhihuMath();
-    const res = solveHtml();
+    const {isFigcaptionVisible} = view;
+    const res = solveHtml(isFigcaptionVisible);
     layout.innerHTML = html; // 恢复现场
     return res;
   }

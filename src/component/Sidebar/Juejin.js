@@ -11,6 +11,7 @@ import "./Juejin.css";
 @inject("navbar")
 @inject("imageHosting")
 @inject("dialog")
+@inject("view")
 @observer
 class Juejin extends Component {
   constructor(props) {
@@ -27,7 +28,8 @@ class Juejin extends Component {
     const html = layout.innerHTML;
     solveJuejinMath();
     addJuejinSuffix();
-    this.html = solveHtml();
+    const {isFigcaptionVisible} = this.props.view;
+    this.html = solveHtml(isFigcaptionVisible);
     this.html = solveJuejinCode(this.html);
     copySafari(this.html);
     message.success("已复制且添加 mdnice 排版后缀，感谢宣传，请到稀土掘金粘贴");

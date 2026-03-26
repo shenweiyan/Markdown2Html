@@ -11,6 +11,7 @@ import "./Wechat.css";
 @inject("navbar")
 @inject("imageHosting")
 @inject("dialog")
+@inject("view")
 @observer
 class Wechat extends Component {
   constructor(props) {
@@ -22,7 +23,8 @@ class Wechat extends Component {
     const layout = document.getElementById(LAYOUT_ID); // 保护现场
     const html = layout.innerHTML;
     solveWeChatMath();
-    this.html = solveHtml();
+    const {isFigcaptionVisible} = this.props.view;
+    this.html = solveHtml(isFigcaptionVisible);
     copySafari(this.html);
     message.success("已复制，请到微信公众平台粘贴");
     layout.innerHTML = html; // 恢复现场
