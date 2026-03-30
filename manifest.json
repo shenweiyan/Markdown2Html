@@ -1,0 +1,20 @@
+{
+  "short_name": "Markdown2Html",
+  "name": "Markdown2Html",
+  "icons": [
+    {
+      "src": "https://gi.weiyan.tech/0000/md2html/logo.webp",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gi.weiyan.tech/0000/md2html/logo.webp",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
