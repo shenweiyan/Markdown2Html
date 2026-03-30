@@ -12,7 +12,13 @@
 - 支持导出 PDF 和 Markdown
 - 欢迎在线使用
   - https://md.weiyan.cc/
-  - https://md2html.shenwy.com/
+  - https://md.shenwy.com/
+
+## 本地预览
+
+```bash
+docker run --rm -v $(pwd):/app -w /app -p 5000:5000 shenweiyan/markdown2html:v1 -c "ln -s /md2html/node_modules /app && yarn run build && serve -s build -l 5000"
+```
 
 ## 主题
 
